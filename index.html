@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pão, Rosas e Letras — Guias de Leitura</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EFE3CC; --paper-deep:#E4D3B4; --ink:#3B2A1F; --brown-deep:#4A2E1E;
+    --terracotta:#A85C3B; --clay:#C17B5A; --gold:#B8935A; --line:#c9b28c; --cream-card:#F7EFDD;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:'Karla',sans-serif;line-height:1.6;
+    background-image:radial-gradient(circle at 20% 10%, rgba(168,92,59,0.05), transparent 40%),radial-gradient(circle at 80% 90%, rgba(168,92,59,0.06), transparent 40%);
+    min-height:100vh;}
+  .wrap{max-width:760px;margin:0 auto;padding:0 28px;}
+  .hero{padding:72px 0 48px;text-align:center;border-bottom:1px solid var(--line);}
+  .hero-badge{width:110px;height:110px;margin:0 auto 22px;border-radius:50%;background:linear-gradient(135deg,var(--terracotta),var(--clay));display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(74,46,30,0.18);}
+  .hero-badge svg{width:56px;height:56px;fill:var(--paper);}
+  .eyebrow{letter-spacing:0.28em;text-transform:uppercase;font-size:12px;color:var(--terracotta);font-weight:700;margin-bottom:14px;}
+  h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(38px,7vw,54px);margin:0 0 14px;color:var(--brown-deep);letter-spacing:-0.01em;}
+  .tagline{font-family:'Fraunces',serif;font-style:italic;font-size:19px;color:var(--terracotta);max-width:44ch;margin:0 auto;}
+
+  .guides{padding:56px 0;}
+  .guide-card{
+    display:flex;gap:22px;align-items:center;
+    padding:26px 26px;
+    background:var(--cream-card);
+    border:1px solid var(--line);
+    border-radius:4px;
+    margin-bottom:20px;
+    text-decoration:none;
+    color:inherit;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .guide-card:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(74,46,30,0.10);}
+  .guide-icon{
+    width:56px;height:56px;flex:0 0 56px;border-radius:50%;
+    background:linear-gradient(135deg,var(--terracotta),var(--clay));
+    display:flex;align-items:center;justify-content:center;
+  }
+  .guide-icon svg{width:28px;height:28px;fill:var(--paper);}
+  .guide-body{flex:1;}
+  .guide-eyebrow{font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--terracotta);font-weight:700;margin-bottom:4px;}
+  .guide-title{font-family:'Fraunces',serif;font-weight:600;font-size:23px;color:var(--brown-deep);margin:0 0 4px;}
+  .guide-author{font-family:'Fraunces',serif;font-style:italic;font-size:14.5px;color:var(--ink);opacity:0.75;}
+  .guide-arrow{font-size:22px;color:var(--terracotta);flex:0 0 auto;}
+
+  footer{text-align:center;padding:40px 0 60px;border-top:1px solid var(--line);}
+  footer .sign{font-family:'Fraunces',serif;font-style:italic;font-size:13.5px;color:var(--ink);opacity:0.6;}
+
+  @media (max-width:560px){
+    .guide-card{flex-direction:column;text-align:center;padding:24px 20px;}
+    .guide-arrow{display:none;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <div class="hero-badge">
+      <svg viewBox="0 0 24 24"><path d="M12 2c-1 3-3 4-3 7 0 2 1.3 3.5 3 3.5s3-1.5 3-3.5c0-3-2-4-3-7zM8 12c-2 1-3 3-3 5 0 3 2.5 5 4.5 5 .8 0 1.5-.3 2-.8-1-.7-1.5-1.8-1.5-3 0-2 1-3.5 2-4.7C10.5 12.3 9.2 12 8 12zm8 0c-1.2 0-2.5.3-3.5 1.5 1 1.2 2 2.7 2 4.7 0 1.2-.5 2.3-1.5 3 .5.5 1.2.8 2 .8 2 0 4.5-2 4.5-5 0-2-1-4-3.5-5z"/></svg>
+    </div>
+    <div class="eyebrow">Clube do livro</div>
+    <h1>Pão, Rosas e Letras</h1>
+    <p class="tagline">Guias de recursos para nossos encontros — resenhas, podcasts, contexto e perguntas para discussão.</p>
+  </div>
+
+  <div class="guides">
+    <a class="guide-card" href="persepolis.html">
+      <div class="guide-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2L4 6v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V6l-8-4z"/></svg>
+      </div>
+      <div class="guide-body">
+        <div class="guide-eyebrow">Encontro · 19 de setembro de 2026</div>
+        <div class="guide-title">Persépolis</div>
+        <div class="guide-author">Marjane Satrapi</div>
+      </div>
+      <div class="guide-arrow">→</div>
+    </a>
+
+    <a class="guide-card" href="dercy.html">
+      <div class="guide-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2c-1 3-3 4-3 7 0 2 1.3 3.5 3 3.5s3-1.5 3-3.5c0-3-2-4-3-7zM8 12c-2 1-3 3-3 5 0 3 2.5 5 4.5 5 .8 0 1.5-.3 2-.8-1-.7-1.5-1.8-1.5-3 0-2 1-3.5 2-4.7C10.5 12.3 9.2 12 8 12zm8 0c-1.2 0-2.5.3-3.5 1.5 1 1.2 2 2.7 2 4.7 0 1.2-.5 2.3-1.5 3 .5.5 1.2.8 2 .8 2 0 4.5-2 4.5-5 0-2-1-4-3.5-5z"/></svg>
+      </div>
+      <div class="guide-body">
+        <div class="guide-eyebrow">Encontro anterior</div>
+        <div class="guide-title">Dercy: A Diva Debochada</div>
+        <div class="guide-author">Adriana Negreiros</div>
+      </div>
+      <div class="guide-arrow">→</div>
+    </a>
+  </div>
+
+  <footer>
+    <div class="sign">Reunidos aqui, os guias de leitura do nosso clube — Fortaleza, Terra da Luz</div>
+  </footer>
+
+</div>
+</body>
+</html>

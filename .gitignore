@@ -1,0 +1,12 @@
+# Claude Code working files — kept local to this machine, not shared with the team.
+# To share any of these with the team later, remove the relevant line and commit the file.
+.temp/
+.claude/
+CLAUDE.md
+
+# macOS
+.DS_Store
+
+# Agents stuff
+.agents
+skills-lock.json

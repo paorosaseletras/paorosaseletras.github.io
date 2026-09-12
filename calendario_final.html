@@ -1,0 +1,328 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1"><style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found]){display:none!important}</style></head><body>
+<title>Calendário Pão, Rosas e Letras</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Archivo:wght@400;500;600;700&display=swap">
+<style>
+  :root{
+    --bg:#F2E6C9;
+    --card:#FFFAF0;
+    --ink:#201209;
+    --ink-strong:#201209;
+    --muted:#6B4A34;
+    --accent:#C58E29;
+    --accent-deep:#A8291A;
+    --gold:#C58E29;
+    --gold-surface:#ECDCB3;
+    --line:rgba(32,18,9,0.14);
+    --series-raiz:#5C3A1E;
+    --series-pao:#A8291A;
+    --series-lampejo:#C58E29;
+    --status-ideia:#8B7355;
+    --status-pesquisa:#A8291A;
+    --status-pronto:#3D7A4A;
+    --status-publicado:#2F6F4E;
+    --status-talvez:#8B7355;
+    --shadow:0 18px 34px rgba(32,18,9,0.10), 0 3px 10px rgba(32,18,9,0.08);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1C130A;
+      --card:#241A0F;
+      --ink:#F2E6C9;
+      --ink-strong:#FBF3E6;
+      --muted:#D8BFA0;
+      --accent:#E2A83F;
+      --accent-deep:#E2573F;
+      --gold:#E2A83F;
+      --gold-surface:#4A2C15;
+      --line:rgba(242,230,201,0.16);
+      --series-raiz:#D3A67D;
+      --series-pao:#F2965A;
+      --series-lampejo:#E0AC55;
+      --status-ideia:#B79A7C;
+      --status-pesquisa:#F2965A;
+      --status-pronto:#6FBF8B;
+      --status-publicado:#5FAF87;
+      --status-talvez:#B79A7C;
+      --shadow:0 18px 34px rgba(0,0,0,0.35), 0 3px 10px rgba(0,0,0,0.25);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1C130A;
+    --card:#241A0F;
+    --ink:#F2E6C9;
+    --ink-strong:#FBF3E6;
+    --muted:#D8BFA0;
+    --accent:#E2A83F;
+    --accent-deep:#E2573F;
+    --gold:#E2A83F;
+    --gold-surface:#4A2C15;
+    --line:rgba(242,230,201,0.16);
+    --series-raiz:#D3A67D;
+    --series-pao:#F2965A;
+    --series-lampejo:#E0AC55;
+    --status-ideia:#B79A7C;
+    --status-pesquisa:#F2965A;
+    --status-pronto:#6FBF8B;
+    --status-publicado:#5FAF87;
+    --status-talvez:#B79A7C;
+    --shadow:0 18px 34px rgba(0,0,0,0.35), 0 3px 10px rgba(0,0,0,0.25);
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--bg); color:var(--ink);
+    font-family:'Archivo',sans-serif;
+    padding:48px 20px 80px;
+  }
+  .wrap{ max-width:860px; margin:0 auto; }
+
+  header{ display:flex; align-items:center; gap:18px; margin-bottom:28px; }
+  .logo{ width:56px; height:56px; border-radius:50%; background:var(--gold-surface); display:flex; align-items:center; justify-content:center; flex:none; box-shadow:var(--shadow); }
+  .logo img{ width:46px; height:46px; border-radius:50%; }
+  h1{ font-family:'Lora',serif; font-weight:700; font-size:30px; margin:0; color:var(--ink-strong); text-wrap:balance; }
+  .kicker{ font-size:12.5px; letter-spacing:2px; text-transform:uppercase; color:var(--accent-deep); font-weight:600; margin-top:4px; }
+
+  .legend{
+    display:flex; flex-wrap:wrap; gap:10px 22px;
+    margin:0 0 34px; padding:16px 20px;
+    background:var(--card); border:1px solid var(--line); border-radius:16px;
+  }
+  .legend-group{ display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+  .legend-title{ font-size:11px; letter-spacing:1.5px; text-transform:uppercase; color:var(--muted); font-weight:600; margin-right:2px; }
+  .chip{ display:inline-flex; align-items:center; gap:6px; font-size:13px; color:var(--ink); font-weight:500; }
+  .dot{ width:9px; height:9px; border-radius:50%; flex:none; }
+
+  section{ margin-bottom:36px; }
+  .eyebrow{
+    display:flex; align-items:baseline; gap:10px; margin-bottom:14px;
+  }
+  .eyebrow .label{ font-size:12.5px; letter-spacing:2px; text-transform:uppercase; color:var(--muted); font-weight:600; }
+  .eyebrow .date{ font-family:'Lora',serif; font-style:italic; color:var(--accent-deep); font-size:16px; font-variant-numeric:tabular-nums; }
+
+  .recap{
+    background:var(--card); border:1px solid var(--line); border-radius:16px;
+    overflow:hidden;
+  }
+  .recap-row{
+    display:flex; align-items:center; gap:12px;
+    padding:13px 20px;
+    border-bottom:1px solid var(--line);
+  }
+  .recap-row:last-child{ border-bottom:none; }
+  .recap-row .series-tag{ font-size:11px; letter-spacing:1px; text-transform:uppercase; font-weight:700; flex:none; width:118px; }
+  .recap-row .title{ font-family:'Lora',serif; font-weight:600; font-style:italic; color:var(--ink-strong); font-size:15px; }
+  .recap-row .author{ color:var(--muted); font-size:13.5px; }
+  .recap-row .flag{
+    margin-left:auto; font-size:11px; letter-spacing:0.8px; text-transform:uppercase;
+    color:var(--status-publicado); font-weight:700; flex:none;
+    display:flex; align-items:center; gap:5px;
+  }
+  .recap-row .pubdate{ margin-left:12px; font-size:11px; color:var(--muted); font-variant-numeric:tabular-nums; flex:none; }
+
+  .entries{ display:flex; flex-direction:column; gap:12px; }
+  .entry{
+    display:flex; background:var(--card); border:1px solid var(--line);
+    border-radius:14px; box-shadow:var(--shadow); overflow:hidden;
+  }
+  .entry.pending{ box-shadow:none; }
+  .bar{ width:5px; flex:none; }
+  .entry-body{ padding:16px 20px; flex:1; min-width:0; }
+  .entry-top{ display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:6px; }
+  .series-name{ font-size:12px; letter-spacing:1.3px; text-transform:uppercase; font-weight:700; }
+  .status-group{ display:flex; align-items:center; gap:8px; flex:none; }
+  .status{
+    display:inline-flex; align-items:center; gap:6px;
+    font-size:11.5px; letter-spacing:0.6px; text-transform:uppercase; font-weight:600;
+    padding:4px 10px; border-radius:99px; flex:none;
+    border:1px solid currentColor;
+  }
+  .status .dot{ width:7px; height:7px; }
+  .expected{ font-size:11px; color:var(--muted); font-style:italic; white-space:nowrap; }
+  .book{ font-family:'Lora',serif; font-weight:700; font-size:19px; color:var(--ink-strong); text-wrap:balance; }
+  .author{ font-size:13.5px; color:var(--muted); margin-top:2px; }
+  .note{ font-size:13.5px; color:var(--ink); opacity:0.85; margin-top:9px; line-height:1.5; font-style:italic; }
+
+  .placeholder-entry{ box-shadow:none; border-style:dashed; opacity:0.75; }
+  .placeholder-entry .note{ font-style:normal; opacity:0.8; }
+  .footer-note{
+    margin-top:44px; padding-top:22px; border-top:1px solid var(--line);
+    font-size:13.5px; color:var(--muted); line-height:1.6;
+  }
+  .footer-note b{ color:var(--ink); }
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="logo"><img src="data:image/png;base64,LOGO_PLACEHOLDER" alt="Pão, Rosas e Letras"></div>
+    <div>
+      <h1>Calendário editorial</h1>
+      <div class="kicker">Pão, Rosas e Letras · @paorosaseletras</div>
+    </div>
+  </header>
+
+  <div class="legend">
+    <div class="legend-group">
+      <span class="legend-title">Séries</span>
+      <span class="chip"><span class="dot" style="background:var(--series-raiz)"></span>Letra Raiz</span>
+      <span class="chip"><span class="dot" style="background:var(--series-pao)"></span>Pão Fresquinho</span>
+      <span class="chip"><span class="dot" style="background:var(--series-lampejo)"></span>Lampejo da Semana</span>
+    </div>
+    <div class="legend-group">
+      <span class="legend-title">Status</span>
+      <span class="chip"><span class="dot" style="background:var(--status-ideia)"></span>ideia</span>
+      <span class="chip"><span class="dot" style="background:var(--status-pesquisa)"></span>pesquisando</span>
+      <span class="chip"><span class="dot" style="background:var(--status-pronto)"></span>pronto</span>
+      <span class="chip"><span class="dot" style="background:var(--status-publicado)"></span>publicado</span>
+    </div>
+  </div>
+
+  <section>
+    <div class="eyebrow"><span class="label">Já publicado</span></div>
+    <div class="recap">
+      <div class="recap-row">
+        <span class="series-tag" style="color:var(--series-lampejo)">Lampejo</span>
+        <span class="title">Certo Azul</span>
+        <span class="author">— Fernando Contreras Castro · imagem renovada no Ateliê Gráfico</span>
+        <span class="pubdate">31/08</span>
+        <span class="flag"><span class="dot" style="background:var(--status-publicado);width:7px;height:7px;border-radius:50%;"></span>estreia da série</span>
+      </div>
+      <div class="recap-row">
+        <span class="series-tag" style="color:var(--series-pao)">Pão Fresquinho</span>
+        <span class="title">Alice no País das Maravilhas</span>
+        <span class="author">— ilust. Yayoi Kusama · imagem renovada no Ateliê Gráfico</span>
+        <span class="pubdate">02/09</span>
+        <span class="flag"><span class="dot" style="background:var(--status-publicado);width:7px;height:7px;border-radius:50%;"></span>estreia da série</span>
+      </div>
+      <div class="recap-row">
+        <span class="series-tag" style="color:var(--series-raiz)">Letra Raiz</span>
+        <span class="title">Viva o Povo Brasileiro</span>
+        <span class="author">— João Ubaldo Ribeiro</span>
+        <span class="pubdate">04/09</span>
+        <span class="flag"><span class="dot" style="background:var(--status-publicado);width:7px;height:7px;border-radius:50%;"></span>estreia da série</span>
+      </div>
+      <div class="recap-row">
+        <span class="series-tag" style="color:var(--series-lampejo)">Lampejo</span>
+        <span class="title">Frango com Ameixas</span>
+        <span class="author">— Marjane Satrapi · trad. Paulo Werneck</span>
+        <span class="pubdate">07/09</span>
+        <span class="flag"><span class="dot" style="background:var(--status-publicado);width:7px;height:7px;border-radius:50%;"></span>publicado</span>
+      </div>
+      <div class="recap-row">
+        <span class="series-tag" style="color:var(--series-pao)">Pão Fresquinho</span>
+        <span class="title">Lazár</span>
+        <span class="author">— Nélio Biedermann</span>
+        <span class="pubdate">09/09</span>
+        <span class="flag"><span class="dot" style="background:var(--status-publicado);width:7px;height:7px;border-radius:50%;"></span>publicado</span>
+      </div>
+      <div class="recap-row">
+        <span class="series-tag" style="color:var(--series-raiz)">Letra Raiz</span>
+        <span class="title">O Nome da Rosa</span>
+        <span class="author">— Umberto Eco</span>
+        <span class="pubdate">12/09</span>
+        <span class="flag"><span class="dot" style="background:var(--status-publicado);width:7px;height:7px;border-radius:50%;"></span>publicado</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow"><span class="label">Pronto pra publicar</span></div>
+    <div class="entries">
+      <div class="entry pending placeholder-entry">
+        <div class="bar" style="background:var(--line)"></div>
+        <div class="entry-body">
+          <div class="note" style="margin-top:0;">Aguardando próximo título fechado pra publicar.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="eyebrow"><span class="label">Em pesquisa</span></div>
+    <div class="entries">
+      <div class="entry pending">
+        <div class="bar" style="background:var(--series-lampejo)"></div>
+        <div class="entry-body">
+          <div class="entry-top">
+            <span class="series-name" style="color:var(--series-lampejo)">Lampejo da Semana</span>
+            <span class="status-group"><span class="expected">prev. 14/09</span><span class="status" style="color:var(--status-pesquisa)"><span class="dot" style="background:var(--status-pesquisa)"></span>pesquisando</span></span>
+          </div>
+          <div class="book">A Cachorra</div>
+          <div class="author">Pilar Quintana</div>
+        </div>
+      </div>
+      <div class="entry pending">
+        <div class="bar" style="background:var(--series-lampejo)"></div>
+        <div class="entry-body">
+          <div class="entry-top">
+            <span class="series-name" style="color:var(--series-lampejo)">Lampejo da Semana</span>
+            <span class="status" style="color:var(--status-pesquisa)"><span class="dot" style="background:var(--status-pesquisa)"></span>pesquisando</span>
+          </div>
+          <div class="book">O último sopro de vida</div>
+          <div class="author">Paul Kalanithi</div>
+        </div>
+      </div>
+      <div class="entry pending">
+        <div class="bar" style="background:var(--series-pao)"></div>
+        <div class="entry-body">
+          <div class="entry-top">
+            <span class="series-name" style="color:var(--series-pao)">Pão Fresquinho</span>
+            <span class="status" style="color:var(--status-pesquisa)"><span class="dot" style="background:var(--status-pesquisa)"></span>pesquisando</span>
+          </div>
+          <div class="book">Antes que se apague</div>
+          <div class="author">Natália Timerman</div>
+        </div>
+      </div>
+      <div class="entry pending">
+        <div class="bar" style="background:var(--series-raiz)"></div>
+        <div class="entry-body">
+          <div class="entry-top">
+            <span class="series-name" style="color:var(--series-raiz)">Letra Raiz</span>
+            <span class="status-group"><span class="expected">prev. 18/11</span><span class="status" style="color:var(--status-pesquisa)"><span class="dot" style="background:var(--status-pesquisa)"></span>pesquisando</span></span>
+          </div>
+          <div class="book">451 Fahrenheit</div>
+          <div class="author">Ray Bradbury · trad. Cid Knipel (edição especial, Biblioteca Azul)</div>
+        </div>
+      </div>
+      <div class="entry pending">
+        <div class="bar" style="background:var(--series-lampejo)"></div>
+        <div class="entry-body">
+          <div class="entry-top">
+            <span class="series-name" style="color:var(--series-lampejo)">Lampejo da Semana</span>
+            <span class="status" style="color:var(--status-pesquisa)"><span class="dot" style="background:var(--status-pesquisa)"></span>pesquisando</span>
+          </div>
+          <div class="book">A Pedra da Loucura</div>
+          <div class="author">Benjamim Labatut</div>
+        </div>
+      </div>
+      <div class="entry pending">
+        <div class="bar" style="background:var(--series-pao)"></div>
+        <div class="entry-body">
+          <div class="entry-top">
+            <span class="series-name" style="color:var(--series-pao)">Pão Fresquinho</span>
+            <span class="status" style="color:var(--status-pesquisa)"><span class="dot" style="background:var(--status-pesquisa)"></span>pesquisando</span>
+          </div>
+          <div class="book">Os imortais</div>
+          <div class="author">Paulliny Tort</div>
+          <div class="note">Escolha ainda não fechada — confirmar antes de começar a pesquisa.</div>
+        </div>
+      </div>
+      <div class="entry pending">
+        <div class="bar" style="background:var(--series-raiz)"></div>
+        <div class="entry-body">
+          <div class="entry-top">
+            <span class="series-name" style="color:var(--series-raiz)">Letra Raiz</span>
+            <span class="status" style="color:var(--status-pesquisa)"><span class="dot" style="background:var(--status-pesquisa)"></span>pesquisando</span>
+          </div>
+          <div class="book">1984</div>
+          <div class="author">George Orwell</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer-note">
+    <b>Como isso fica atualizado:</b> este calendário é a memória viva das próximas pautas. A cada título novo que você passar, ele entra aqui — e a cada pesquisa fechada, o status muda de "pesquisando" pra "pronto" e depois "publicado" (com a data aparecendo ao lado do título). Não precisa mandar tudo de uma vez: um título por série já garante o lugar na fila.
+  </div>
+</div>
+
+</body></html>

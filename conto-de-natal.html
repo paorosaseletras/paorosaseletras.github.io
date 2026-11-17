@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TXT69LYLPT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-TXT69LYLPT');
+</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Um Conto de Natal — Guia de Recursos | Pão, Rosas e Letras</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F2E6C9;
+    --paper-deep:#ECDCB3;
+    --ink:#201209;
+    --brown-deep:#201209;
+    --terracotta:#A8291A;
+    --clay:#C58E29;
+    --gold:#C58E29;
+    --line:#D8C7A0;
+    --cream-card:#FFFAF0;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Karla',sans-serif;
+    line-height:1.6;
+    background-image:
+      radial-gradient(circle at 20% 10%, rgba(168,41,26,0.05), transparent 40%),
+      radial-gradient(circle at 80% 90%, rgba(168,41,26,0.06), transparent 40%);
+  }
+  .wrap{max-width:840px;margin:0 auto;padding:0 28px;}
+
+  /* Hero */
+  .hero{
+    position:relative;
+    padding:64px 0 40px;
+    text-align:center;
+    border-bottom:1px solid var(--line);
+  }
+  .hero-img{
+    width:210px;
+    margin:0 auto 18px;
+    display:block;
+    filter: sepia(6%);
+  }
+  .eyebrow{
+    font-family:'Karla',sans-serif;
+    letter-spacing:0.28em;
+    text-transform:uppercase;
+    font-size:12px;
+    color:var(--terracotta);
+    font-weight:700;
+    margin-bottom:10px;
+  }
+  .club-name{
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-weight:500;
+    font-size:22px;
+    color:var(--brown-deep);
+    margin:0 0 22px;
+  }
+  h1.title{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:clamp(42px,7vw,68px);
+    margin:0 0 6px;
+    color:var(--brown-deep);
+    letter-spacing:-0.01em;
+  }
+  .author{
+    font-family:'Fraunces',serif;
+    font-style:italic;
+    font-size:20px;
+    color:var(--terracotta);
+    margin:0 0 26px;
+  }
+  .meta-row{
+    display:flex;
+    justify-content:center;
+    gap:34px;
+    flex-wrap:wrap;
+    font-size:13px;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--ink);
+    opacity:0.85;
+    font-weight:600;
+  }
+  .meta-row span.label{display:block;font-size:10px;opacity:0.65;font-weight:700;letter-spacing:0.15em;margin-bottom:3px;}
+
+  /* Ornamental divider */
+  .divider{
+    display:flex;align-items:center;justify-content:center;gap:14px;
+    margin:8px 0 0;
+    color:var(--gold);
+  }
+  .divider svg{width:22px;height:22px;fill:var(--gold);}
+  .divider .rule{height:1px;width:60px;background:var(--line);}
+
+  /* In memoriam */
+  .memoriam{
+    background:var(--cream-card);
+    border:1px solid var(--line);
+    border-left:4px solid var(--terracotta);
+    margin:44px 0;
+    padding:22px 26px;
+    border-radius:2px;
+  }
+  .memoriam p{margin:0;font-size:15px;}
+  .memoriam .tag{
+    font-family:'Fraunces',serif;font-style:italic;color:var(--terracotta);
+    font-size:14px;margin-bottom:6px;display:block;
+  }
+
+  /* Sections */
+  section{padding:52px 0;border-bottom:1px solid var(--line);}
+  section:last-of-type{border-bottom:none;}
+  .section-head{display:flex;align-items:baseline;gap:14px;margin-bottom:22px;}
+  .section-num{
+    font-family:'Fraunces',serif;font-style:italic;color:var(--terracotta);
+    font-size:15px;opacity:0.75;
+  }
+  h2{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:30px;
+    color:var(--brown-deep);
+    margin:0;
+  }
+  .section-sub{font-size:14.5px;color:var(--ink);opacity:0.75;margin:-14px 0 26px;max-width:60ch;}
+
+  .lead-img{
+    width:100%;
+    max-width:340px;
+    display:block;
+    margin:0 auto 30px;
+    border-radius:2px;
+  }
+  .lead-img.small{max-width:260px;}
+
+  p{font-size:15.5px;margin:0 0 16px;}
+
+  /* Resource cards */
+  .res-list{list-style:none;margin:0;padding:0;}
+  .res-item{
+    padding:16px 0;
+    border-top:1px solid var(--line);
+    display:flex;
+    flex-direction:column;
+    gap:3px;
+  }
+  .res-item:first-child{border-top:none;}
+  .res-name{
+    font-family:'Fraunces',serif;
+    font-weight:600;
+    font-size:17px;
+    color:var(--brown-deep);
+  }
+  .res-desc{font-size:14px;opacity:0.8;}
+  .res-link{
+    font-size:13px;
+    color:var(--terracotta);
+    word-break:break-all;
+    text-decoration:none;
+    border-bottom:1px dotted var(--terracotta);
+  }
+  .res-link:hover{opacity:0.7;}
+
+  /* Book grid for "other works" */
+  .book-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:18px;
+  }
+  .book-card{
+    background:var(--cream-card);
+    border:1px solid var(--line);
+    padding:18px 20px;
+    border-radius:2px;
+  }
+  .book-card .res-name{font-size:16px;}
+  .book-card .res-desc{margin-top:4px;}
+  .book-card .res-link{display:inline-block;margin-top:8px;}
+
+  /* Film list */
+  .film-item{padding:14px 0;border-top:1px solid var(--line);}
+  .film-item:first-child{border-top:none;}
+  .film-title{font-family:'Fraunces',serif;font-weight:600;font-size:16px;color:var(--brown-deep);}
+  .film-meta{font-size:12.5px;color:var(--terracotta);text-transform:uppercase;letter-spacing:0.05em;font-weight:700;margin-left:8px;}
+
+  /* Discussion questions */
+  .q-block{margin-bottom:26px;}
+  .q-block h3{
+    font-family:'Fraunces',serif;font-style:italic;font-weight:500;
+    font-size:16px;color:var(--terracotta);margin:0 0 10px;
+  }
+  .q-block ul{margin:0;padding-left:20px;}
+  .q-block li{margin-bottom:8px;font-size:15px;}
+
+  /* Warning box */
+  .warn{
+    font-size:13.5px;
+    background:var(--cream-card);
+    border:1px dashed var(--clay);
+    padding:14px 18px;
+    border-radius:2px;
+    margin-top:26px;
+  }
+
+  /* Footer */
+  footer{
+    text-align:center;
+    padding:50px 0 60px;
+  }
+  footer .club-name{margin-bottom:4px;}
+  footer .meta-row{margin-bottom:22px;}
+  footer .sign{
+    font-family:'Fraunces',serif;font-style:italic;font-size:14px;color:var(--ink);opacity:0.6;
+  }
+
+  @media (max-width:600px){
+    .meta-row{gap:20px;}
+    h2{font-size:25px;}
+  }
+
+  /* Acréscimos deste guia */
+  .hero-img.seal{width:210px;border-radius:50%;box-shadow:0 6px 18px rgba(32,18,9,0.18);filter:none;}
+  .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px 22px;background:var(--cream-card);border:1px solid var(--line);border-radius:2px;padding:18px 20px;margin:22px 0;}
+  .facts div{display:flex;flex-direction:column;gap:2px;}
+  .facts .k{font-size:10px;letter-spacing:0.15em;text-transform:uppercase;font-weight:700;opacity:0.65;}
+  .facts .v{font-size:14px;font-weight:600;}
+  .buy{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:6px;}
+  .buy a{font-size:12px;font-weight:700;letter-spacing:.04em;color:var(--terracotta);border:1px solid var(--terracotta);border-radius:3px;padding:5px 12px;text-decoration:none;}
+  .buy a:hover{background:var(--terracotta);color:var(--paper);}
+  .buy-note{font-size:13px;opacity:.8;text-align:center;max-width:52ch;margin:14px auto 0;}
+  .lang{font-family:'Karla',sans-serif;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;color:var(--terracotta);border:1px solid var(--line);border-radius:3px;padding:1px 6px;margin-left:8px;white-space:nowrap;vertical-align:middle;}
+  .sub-h{font-family:'Fraunces',serif;font-style:italic;font-weight:500;font-size:16px;color:var(--terracotta);margin:26px 0 4px;}
+  .axis{padding:18px 0;border-top:1px solid var(--line);}
+  .axis:first-of-type{border-top:none;padding-top:0;}
+  .axis h3{font-family:'Fraunces',serif;font-weight:600;font-size:17px;color:var(--brown-deep);margin:0 0 6px;}
+  .axis p{margin:0;font-size:15px;}
+  .callout{background:var(--cream-card);border:1px solid var(--line);border-left:4px solid var(--terracotta);border-radius:2px;padding:20px 24px;}
+  .callout ul{margin:0;padding-left:20px;}
+  .callout li{margin-bottom:10px;font-size:15px;}
+  .callout li:last-child{margin-bottom:0;}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <div class="hero">
+    <img class="hero-img seal" src="data:image/jpeg;base64,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" alt="Selo do encontro: Um Conto de Natal, em papel recortado, com um velho de touca segurando uma vela, um relógio de bolso à meia-noite, azevinho e uma corrente com cadeado">
+    <div class="eyebrow">Guia de recursos para o encontro</div>
+    <div class="club-name">Roda de Leitoras · Pão, Rosas e Letras</div>
+    <h1 class="title">Um Conto de Natal</h1>
+    <div class="author">Charles Dickens</div>
+    <div class="meta-row">
+      <div><span class="label">Encontro</span>12 de dezembro de 2026</div>
+      <div><span class="label">Local</span>Fortaleza, Terra da Luz</div>
+    </div>
+  </div>
+
+  <div class="memoriam">
+    <span class="tag">Uma nota antes de começar</span>
+    <p>Quase todo mundo conhece esta história sem nunca ter lido o livro. Scrooge virou sinônimo de avarento em inglês, emprestou o nome ao Tio Patinhas e já foi Mickey, Muppet e desenho da Disney. O convite deste encontro é ler o texto como se fosse a primeira vez: ele é mais engraçado, mais assustador e mais zangado do que os filmes deixam ver.</p>
+  </div>
+
+  <section id="sobre">
+    <div class="section-head"><span class="section-num">01</span><h2>Sobre o livro</h2></div>
+    <p>Londres, véspera de Natal. Ebenezer Scrooge, homem de negócios avarento e sozinho, recusa o convite do sobrinho para a ceia, nega uma doação aos pobres e só a contragosto dá folga ao seu escriturário, Bob Cratchit. À noite recebe a visita do fantasma de Jacob Marley, seu sócio morto há sete anos, que arrasta uma corrente feita de cofres, chaves e livros-caixa e avisa: três espíritos virão.</p>
+    <p>O Espírito dos Natais Passados leva Scrooge de volta ao menino esquecido no colégio, à irmã Fan, ao baile do patrão Fezziwig e a Belle, a noiva que ele trocou pelo dinheiro. O do Natal Presente mostra a mesa pobre e alegre dos Cratchit, com o pequeno Tim e sua muleta. O dos Natais Futuros não diz uma palavra e aponta para um túmulo.</p>
+    <p>Dickens chamou o livro de “história de fantasmas de Natal” e, em vez de capítulos, dividiu-o em cinco estrofes, como uma cantiga. É curto: cabe numa tarde.</p>
+    <div class="facts">
+      <div><span class="k">Título original</span><span class="v">A Christmas Carol. In Prose. Being a Ghost Story of Christmas</span></div>
+      <div><span class="k">Publicação</span><span class="v">Londres, 19 de dezembro de 1843</span></div>
+      <div><span class="k">Ilustrações originais</span><span class="v">John Leech</span></div>
+      <div><span class="k">Estrutura</span><span class="v">Cinco estrofes</span></div>
+    </div>
+    <p>No Brasil o livro circula com vários títulos: <em>Um conto de Natal</em>, <em>Uma canção de Natal</em>, <em>Um cântico de Natal</em> e até <em>Um hino de Natal</em>, na versão condensada de Cecília Meireles. Qualquer edição integral serve para o encontro. Entre as mais fáceis de achar estão a da Penguin-Companhia (<em>Uma canção de Natal</em>, tradução de Rodrigo Lacerda, com as ilustrações de John Leech), a da Antofágica (tradução de Leonardo Alves, ilustrações de Guilherme Petreca) e a da L&amp;PM Pocket.</p>
+    <div class="buy">
+      <a href="https://link.amazon/B02rSyLGd" target="_blank" rel="noopener">Comprar — Edição 1</a>
+      <a href="https://link.amazon/B0j0yQmQL" target="_blank" rel="noopener">Comprar — Edição 2</a>
+    </div>
+    <p class="buy-note">Se for adquirir o livro, compre em livrarias físicas (de preferência independentes) ou direto nas editoras. Se for comprar na Amazon, use os links do Clube.</p>
+  </section>
+
+  <section id="autor">
+    <div class="section-head"><span class="section-num">02</span><h2>Sobre o autor</h2></div>
+    <p>Charles Dickens nasceu em 1812, em Portsmouth, e morreu em 1870. Quando tinha doze anos, o pai foi preso por dívidas e ele foi mandado trabalhar numa fábrica de graxa para sapatos, colando rótulos em potes. Nunca esqueceu. Crianças sozinhas, dívidas e o medo da pobreza atravessam tudo o que escreveu.</p>
+    <p>Começou como repórter e virou, ainda jovem, o romancista mais lido da Inglaterra vitoriana, publicando em fascículos que o público esperava como hoje se espera o episódio de uma série. Quando escreveu <em>Um Conto de Natal</em>, tinha 31 anos, já era o autor de <em>Oliver Twist</em> e estava com as contas apertadas.</p>
+    <p>Anos depois passou a ler o livro em público, em teatros lotados, fazendo todas as vozes. Foi com Scrooge que ele subiu ao palco pela primeira vez como leitor, e foi um trecho de Scrooge que leu na sua última apresentação.</p>
+  </section>
+
+  <section id="origem">
+    <div class="section-head"><span class="section-num">03</span><h2>Como o livro nasceu</h2></div>
+    <p>Em 1843, Dickens leu um relatório do Parlamento sobre o trabalho de mulheres e crianças em minas e fábricas e ficou horrorizado. Em setembro visitou, em Londres, uma escola de caridade para crianças muito pobres. Pensou em responder com um panfleto, que se chamaria <em>Um apelo ao povo da Inglaterra em nome do filho do homem pobre</em>.</p>
+    <p>Desistiu do panfleto. Achou que uma história chegaria mais longe e escreveu o livro em seis semanas, entre outubro e novembro, andando pelas ruas de Londres à noite. Como o romance anterior tinha vendido mal, bancou parte da edição do próprio bolso, em troca de uma fatia dos lucros.</p>
+    <p>O livro saiu em 19 de dezembro. Os seis mil exemplares da primeira tiragem se esgotaram em poucos dias. O manuscrito, cheio de rasuras, está hoje na Morgan Library, em Nova York, que o expõe todo mês de dezembro.</p>
+    <p>O panfleto que ele não escreveu continua dentro do livro. Está na cena em que o Espírito do Natal Presente abre o manto e mostra duas crianças esquálidas, Ignorância e Miséria.</p>
+  </section>
+
+  <section id="ouvir">
+    <div class="section-head"><span class="section-num">04</span><h2>Para ouvir e assistir</h2></div>
+    <p class="section-sub">Conversas sobre o livro, em português.</p>
+    <div class="sub-h">Áudio</div>
+    <ul class="res-list">
+      <li class="res-item">
+        <span class="res-name">Charles Dickens e a reinvenção do Natal</span>
+        <span class="res-desc">Programa Tik Tak, da rádio pública portuguesa (RTP Antena 1). Eduarda Maio entrevista a professora Luísa Leal de Faria, da Universidade Católica, sobre como o livro redefiniu a festa. 30 minutos, em português de Portugal, onde o livro se chama <em>Um Cântico de Natal</em>.</span>
+        <a class="res-link" href="https://www.rtp.pt/play/p12254/e895948/tik-tak" target="_blank" rel="noopener">rtp.pt/play/tik-tak · ep. 32</a>
+      </li>
+      <li class="res-item">
+        <span class="res-name">Biblioteca Pública: “Um Cântico de Natal”</span>
+        <span class="res-desc">Os escritores Afonso Reis Cabral, Dulce Cardoso e Richard Zimler conversam sobre o livro. 38 minutos, RTP Antena 1. É a coisa mais parecida com um clube de leitura em áudio.</span>
+        <a class="res-link" href="https://www.rtp.pt/play/p9930/e659725/biblioteca-publica" target="_blank" rel="noopener">rtp.pt/play/biblioteca-publica · ep. 34</a>
+      </li>
+    </ul>
+    <div class="sub-h">Vídeo</div>
+    <ul class="res-list">
+      <li class="res-item">
+        <span class="res-name">O livro que inventou o Natal moderno</span>
+        <span class="res-desc">Vídeo recente sobre como a história de 1843 ajudou a moldar o Natal que conhecemos.</span>
+        <a class="res-link" href="https://www.youtube.com/watch?v=EVMFGnLl2bs" target="_blank" rel="noopener">youtube.com/watch?v=EVMFGnLl2bs</a>
+      </li>
+      <li class="res-item">
+        <span class="res-name">A história de Natal mais famosa do mundo</span>
+        <span class="res-desc">Resenha em vídeo, boa para quem conhece Scrooge só pelos filmes e ainda não ligou o nome ao livro.</span>
+        <a class="res-link" href="https://www.youtube.com/watch?v=Z9CyzsQ9Ad4" target="_blank" rel="noopener">youtube.com/watch?v=Z9CyzsQ9Ad4</a>
+      </li>
+      <li class="res-item">
+        <span class="res-name">Resenha e análise: Um Conto de Natal</span>
+        <span class="res-desc">Vídeo sobre o sentido da história e o que ela diz do Natal.</span>
+        <a class="res-link" href="https://www.youtube.com/watch?v=zi8eNjsp30E" target="_blank" rel="noopener">youtube.com/watch?v=zi8eNjsp30E</a>
+      </li>
+      <li class="res-item">
+        <span class="res-name">O livro e o filme da Disney</span>
+        <span class="res-desc">Do canal Filmes para Ler: o livro comparado com a adaptação <em>Os Fantasmas de Scrooge</em>.</span>
+        <a class="res-link" href="https://www.youtube.com/watch?v=2HjSaKZOfJo" target="_blank" rel="noopener">youtube.com/watch?v=2HjSaKZOfJo</a>
+      </li>
+    </ul>
+  </section>
+
+  <section id="critica">
+    <div class="section-head"><span class="section-num">05</span><h2>Crítica e estudos</h2></div>
+    <p class="section-sub">Leituras brasileiras do livro, todas de acesso aberto. Os artigos acadêmicos abrem em PDF.</p>
+    <ul class="res-list">
+      <li class="res-item">
+        <span class="res-name">“Livreto fantasmagórico”: os elementos fantásticos de Um Conto de Natal</span>
+        <span class="res-desc">Artigo de Cássia Farias e André Cardoso (UFF) na revista Scripta Uniandrade, 2017. Lê o livro como alegoria e pergunta por que Dickens escolheu fantasmas para falar de pobreza.</span>
+        <a class="res-link" href="https://revistahom.uniandrade.br/index.php/ScriptaUniandrade/article/download/803/657" target="_blank" rel="noopener">revistahom.uniandrade.br · PDF</a>
+      </li>
+      <li class="res-item">
+        <span class="res-name">Crianças na Era Vitoriana: Oliver Twist e Um Conto de Natal</span>
+        <span class="res-desc">Artigo da revista Letrônica (PUCRS, 2024) sobre a Revolução Industrial e o trabalho infantil nos dois livros.</span>
+        <a class="res-link" href="https://revistaseletronicas.pucrs.br/letronica/article/download/46120/28780/215137" target="_blank" rel="noopener">revistaseletronicas.pucrs.br · PDF</a>
+      </li>
+      <li class="res-item">
+        <span class="res-name">Dickens em transmutação: os espíritos no cinema</span>
+        <span class="res-desc">Artigo de Renata Mascarenhas, da Universidade Estadual do Ceará, sobre como os três espíritos passam do texto para a tela. Bom par para a lista de filmes.</span>
+        <a class="res-link" href="https://periodicos.ufsc.br/index.php/traducao/article/download/6739/6211/20422" target="_blank" rel="noopener">periodicos.ufsc.br · PDF</a>
+      </li>
+      <li class="res-item">
+        <span class="res-name">Um Hino de Natal, a versão de Cecília Meireles</span>
+        <span class="res-desc">Artigo da revista Belas Infiéis (UnB, 2012) sobre a versão condensada que Cecília Meireles fez do livro. Mostra o que se perde e o que se ganha quando uma poeta encurta Dickens.</span>
+        <a class="res-link" href="https://repositorio.unb.br/bitstream/10482/31618/1/ARTIGO_ChristmasCarolAnalise.pdf" target="_blank" rel="noopener">repositorio.unb.br · PDF</a>
+      </li>
+      <li class="res-item">
+        <span class="res-name">Skoob: resenhas de leitoras e leitores</span>
+        <span class="res-desc">Mais de duas mil resenhas na página da edição da Antofágica. Serve também para registrar a sua leitura.</span>
+        <a class="res-link" href="https://www.skoob.com.br/um-conto-de-natal-3935ed1011944.html" target="_blank" rel="noopener">skoob.com.br/um-conto-de-natal</a>
+      </li>
+    </ul>
+  </section>
+
+  <section id="contexto">
+    <div class="section-head"><span class="section-num">06</span><h2>Fontes de contexto</h2></div>
+    <p class="section-sub">Para entender a Londres de 1843 e a história por trás da história.</p>
+    <ul class="res-list">
+      <li class="res-item">
+        <span class="res-name">Por que Dickens escreveu o livro<span class="lang">Inglês</span></span>
+        <span class="res-desc">Texto do site History Hit sobre a origem da história, a quem ela se dirigia e o sucesso imediato da primeira edição.</span>
+        <a class="res-link" href="https://www.historyhit.com/culture/why-did-charles-dickens-write-a-christmas-carol/" target="_blank" rel="noopener">historyhit.com/why-did-charles-dickens-write-a-christmas-carol</a>
+      </li>
+      <li class="res-item">
+        <span class="res-name">A Christmas Carol in Context<span class="lang">Inglês</span></span>
+        <span class="res-desc">Texto de Olivia Jordan no site TheCollector, com as ilustrações originais de John Leech e o panfleto que Dickens desistiu de escrever.</span>
+        <a class="res-link" href="https://www.thecollector.com/a-christmas-carol-context-dickens-fable/" target="_blank" rel="noopener">thecollector.com/a-christmas-carol-context</a>
+      </li>
+      <li class="res-item">
+        <span class="res-name">O manuscrito na Morgan Library<span class="lang">Inglês</span></span>
+        <span class="res-desc">Reportagem sobre o manuscrito original, guardado em Nova York e exposto todo mês de dezembro, uma página nova a cada ano.</span>
+        <a class="res-link" href="https://news.yahoo.com/dickens-did-christmas-carol-debuted-110052738.html" target="_blank" rel="noopener">news.yahoo.com/dickens-did-christmas-carol</a>
+      </li>
+      <li class="res-item">
+        <span class="res-name">The Charles Dickens Page<span class="lang">Inglês</span></span>
+        <span class="res-desc">Página dedicada ao livro, com resumo, contexto das escolas para crianças pobres e o prefácio do autor.</span>
+        <a class="res-link" href="https://charlesdickenspage.com/carol.html" target="_blank" rel="noopener">charlesdickenspage.com/carol</a>
+      </li>
+    </ul>
+  </section>
+
+  <section id="filmes">
+    <div class="section-head"><span class="section-num">07</span><h2>Filmes e adaptações</h2></div>
+    <p class="section-sub">É um dos livros mais adaptados que existem. Vale ver um deles depois da leitura e reparar no que cada versão corta ou adoça. A disponibilidade nos serviços de streaming muda sempre, por isso não indicamos onde assistir.</p>
+    <div class="film-item">
+      <span class="film-title">Scrooge</span><span class="film-meta">1951 · Brian Desmond Hurst</span>
+      <p class="res-desc" style="margin-top:4px;">Em preto e branco, com Alastair Sim. Para muita gente, a versão mais fiel ao tom sombrio do livro.</p>
+    </div>
+    <div class="film-item">
+      <span class="film-title">O Conto de Natal do Mickey</span><span class="film-meta">1983 · Disney</span>
+      <p class="res-desc" style="margin-top:4px;">Curta de animação com o Tio Patinhas no papel que lhe deu o nome.</p>
+    </div>
+    <div class="film-item">
+      <span class="film-title">Os Fantasmas Contra-Atacam</span><span class="film-meta">1988 · Richard Donner</span>
+      <p class="res-desc" style="margin-top:4px;">Bill Murray como um executivo de televisão. A história levada para os anos 1980, em chave de comédia.</p>
+    </div>
+    <div class="film-item">
+      <span class="film-title">O Conto de Natal dos Muppets</span><span class="film-meta">1992 · Brian Henson</span>
+      <p class="res-desc" style="margin-top:4px;">Michael Caine contracena a sério com os bonecos. Usa muito do texto original, na voz de um narrador que é o próprio Dickens.</p>
+    </div>
+    <div class="film-item">
+      <span class="film-title">Os Fantasmas de Scrooge</span><span class="film-meta">2009 · Robert Zemeckis</span>
+      <p class="res-desc" style="margin-top:4px;">Animação da Disney com Jim Carrey em vários papéis.</p>
+    </div>
+    <div class="film-item">
+      <span class="film-title">O Homem que Inventou o Natal</span><span class="film-meta">2017 · Bharat Nalluri</span>
+      <p class="res-desc" style="margin-top:4px;">Não adapta o livro: conta as seis semanas em que Dickens o escreveu.</p>
+    </div>
+    <div class="film-item">
+      <span class="film-title">Scrooge: Um Conto de Natal</span><span class="film-meta">2022 · animação musical</span>
+      <p class="res-desc" style="margin-top:4px;">Uma das versões mais recentes, lançada pela Netflix.</p>
+    </div>
+    <div class="warn">⚠️ O livro tem fantasmas, um cemitério e a ameaça da morte de uma criança. Nada é explícito, mas é uma história de assombração e pode assustar os pequenos se a leitura for em família.</div>
+  </section>
+
+  <section id="outras-obras">
+    <div class="section-head"><span class="section-num">08</span><h2>Para continuar com Dickens</h2></div>
+    <p class="section-sub">Depois do sucesso de 1843, Dickens escreveu mais quatro livros de Natal. E há os romances, para quem quiser fôlego longo.</p>
+    <div class="book-grid">
+      <div class="book-card">
+        <div class="res-name">Os Carrilhões <span style="font-weight:400;opacity:.6;font-size:13px;">(1844)</span></div>
+        <div class="res-desc">O segundo livro de Natal, mais político que o primeiro. No original, <em>The Chimes</em>.</div>
+      </div>
+      <div class="book-card">
+        <div class="res-name">O Grilo na Lareira <span style="font-weight:400;opacity:.6;font-size:13px;">(1845)</span></div>
+        <div class="res-desc">O terceiro, uma história doméstica. No original, <em>The Cricket on the Hearth</em>.</div>
+      </div>
+      <div class="book-card">
+        <div class="res-name">Oliver Twist <span style="font-weight:400;opacity:.6;font-size:13px;">(1838)</span></div>
+        <div class="res-desc">O órfão nas ruas de Londres. O mesmo assunto de <em>Um Conto de Natal</em>, sem fantasmas.</div>
+      </div>
+      <div class="book-card">
+        <div class="res-name">David Copperfield <span style="font-weight:400;opacity:.6;font-size:13px;">(1850)</span></div>
+        <div class="res-desc">O romance mais autobiográfico, com a fábrica da infância contada quase sem disfarce.</div>
+      </div>
+      <div class="book-card">
+        <div class="res-name">Tempos Difíceis <span style="font-weight:400;opacity:.6;font-size:13px;">(1854)</span></div>
+        <div class="res-desc">Uma cidade industrial e uma escola onde só os fatos importam.</div>
+      </div>
+      <div class="book-card">
+        <div class="res-name">Grandes Esperanças <span style="font-weight:400;opacity:.6;font-size:13px;">(1861)</span></div>
+        <div class="res-desc">Pip, uma herança misteriosa e o preço de querer subir na vida.</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="eixos">
+    <div class="section-head"><span class="section-num">09</span><h2>Eixos para a conversa</h2></div>
+    <div class="axis">
+      <h3>O avarento também é avaro consigo</h3>
+      <p>Scrooge é rico e vive como pobre: janta mingau, não acende o fogo, mora em quartos escuros. O livro trata a avareza menos como ganância e mais como medo. O que ele está guardando, e de quê se protege?</p>
+    </div>
+    <div class="axis">
+      <h3>A pobreza é problema de quem?</h3>
+      <p>Quando pedem uma doação, Scrooge pergunta se não há prisões e asilos. Diz que os pobres que preferem morrer deveriam fazê-lo logo, para diminuir o excedente da população. Dickens põe na boca dele ideias que eram respeitáveis em 1843. O Espírito devolve as mesmas palavras diante de Tim.</p>
+    </div>
+    <div class="axis">
+      <h3>Memória: o que o passado faz com a gente</h3>
+      <p>O primeiro espírito não acusa, só mostra. O menino sozinho no colégio, a irmã Fan, a festa de Fezziwig, a despedida de Belle. É a parte do livro em que Scrooge chora, e a que explica como alguém se torna Scrooge.</p>
+    </div>
+    <div class="axis">
+      <h3>Dá para mudar de vida numa noite?</h3>
+      <p>A conversão é rápida e completa. Para alguns leitores é o ponto fraco do livro; para outros, é a razão de ele existir. Scrooge muda por compaixão ou por medo do túmulo? Faz diferença?</p>
+    </div>
+    <div class="axis">
+      <h3>Caridade ou justiça</h3>
+      <p>Scrooge acorda, manda um peru aos Cratchit e aumenta o salário de Bob. O livro pede generosidade de quem tem. Não pede que o mundo de Bob Cratchit mude. É o limite de Dickens ou a sua esperteza, falando a quem podia comprar o livro?</p>
+    </div>
+    <div class="axis">
+      <h3>O Natal inventado</h3>
+      <p>Muito do que entendemos por Natal, a mesa farta, a família reunida, a obrigação de ser generoso, ganhou forma neste livro. E chegou até nós com neve, lareira e azevinho, num dezembro de sol em Fortaleza.</p>
+    </div>
+    <div class="axis">
+      <h3>Uma história de fantasmas que faz rir</h3>
+      <p>O narrador conversa com a leitora, faz piada com pregos de porta e descreve comida com gula. O humor convive com correntes arrastadas e um espírito sem rosto. O que o riso faz pelo sermão?</p>
+    </div>
+  </section>
+
+  <section id="perguntas">
+    <div class="section-head"><span class="section-num">10</span><h2>Perguntas para guiar a discussão</h2></div>
+    <p class="section-sub">Começando mais leve, aprofundando aos poucos.</p>
+
+    <div class="q-block">
+      <h3>Para abrir a conversa</h3>
+      <ul>
+        <li>Vocês chegaram ao livro por qual versão: filme, desenho, teatro da escola? O texto surpreendeu em quê?</li>
+        <li>Que cena ficou na cabeça depois de fechar o livro?</li>
+      </ul>
+    </div>
+    <div class="q-block">
+      <h3>Sobre Scrooge</h3>
+      <ul>
+        <li>No começo do livro, Scrooge é um homem mau ou um homem ferido? O livro escolhe?</li>
+        <li>Dos três espíritos, qual foi o mais convincente para vocês? E para ele?</li>
+        <li>Belle diz que foi substituída por um ídolo de ouro. O que Scrooge perdeu ali, além de um casamento?</li>
+      </ul>
+    </div>
+    <div class="q-block">
+      <h3>Sobre pobreza e responsabilidade</h3>
+      <ul>
+        <li>Marley diz que seu negócio deveria ter sido a humanidade. O que seria isso hoje, para quem tem uma empresa ou emprega alguém?</li>
+        <li>As frases de Scrooge sobre os pobres lembram coisas que ainda se ouvem. Quais?</li>
+        <li>A família Cratchit é pobre e feliz. Isso é retrato, consolo ou conveniência?</li>
+      </ul>
+    </div>
+    <div class="q-block">
+      <h3>Sobre memória e tempo</h3>
+      <ul>
+        <li>Se o Espírito dos Natais Passados viesse buscar vocês, a que Natal voltariam?</li>
+        <li>O futuro que o terceiro espírito mostra pode ser mudado. O livro acredita mais em destino ou em escolha?</li>
+      </ul>
+    </div>
+    <div class="q-block">
+      <h3>Sobre o Natal</h3>
+      <ul>
+        <li>O que do Natal de vocês veio de Dickens, e o que é daqui?</li>
+        <li>O livro defende que a festa serve para alguma coisa. Para quê? Vocês concordam?</li>
+      </ul>
+    </div>
+    <div class="q-block">
+      <h3>Para fechar</h3>
+      <ul>
+        <li>A mudança de Scrooge dura? O que vocês imaginam dele no Natal seguinte?</li>
+        <li>Quem é o Scrooge, o Bob Cratchit e o Fezziwig da vida de vocês?</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="notas">
+    <div class="section-head"><span class="section-num">11</span><h2>Notas práticas do encontro</h2></div>
+    <div class="callout">
+      <ul>
+        <li><b>Sábado, 12 de dezembro de 2026.</b> É o último encontro do ano da Roda de Leitoras.</li>
+        <li><b>Traga o seu exemplar.</b> As traduções mudam muito, do título em diante. Vamos comparar o começo do livro em edições diferentes.</li>
+        <li><b>Escolha um trecho para ler em voz alta.</b> Dickens escreveu o livro para ser lido assim, e ele mesmo o leu em público durante anos.</li>
+        <li><b>Não terminou?</b> Venha assim mesmo. A história você já conhece.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <div class="divider"><span class="rule"></span>
+      <svg viewBox="0 0 24 24"><path d="M12 2c-1 3-3 4-3 7 0 2 1.3 3.5 3 3.5s3-1.5 3-3.5c0-3-2-4-3-7zM8 12c-2 1-3 3-3 5 0 3 2.5 5 4.5 5 .8 0 1.5-.3 2-.8-1-.7-1.5-1.8-1.5-3 0-2 1-3.5 2-4.7C10.5 12.3 9.2 12 8 12zm8 0c-1.2 0-2.5.3-3.5 1.5 1 1.2 2 2.7 2 4.7 0 1.2-.5 2.3-1.5 3 .5.5 1.2.8 2 .8 2 0 4.5-2 4.5-5 0-2-1-4-3.5-5z"/></svg>
+      <span class="rule"></span>
+    </div>
+    <div class="club-name" style="margin-top:14px;">Roda de Leitoras · Pão, Rosas e Letras</div>
+    <div class="meta-row">
+      <div><span class="label">Encontro</span>12 de dezembro de 2026</div>
+      <div><span class="label">Local</span>Fortaleza, Terra da Luz</div>
+    </div>
+    <div class="sign">Guia compilado para a leitura de Um Conto de Natal, de Charles Dickens</div>
+    <a href="rodadeleitoras.html" style="display:inline-block;margin-top:20px;font-size:13px;color:var(--terracotta);text-decoration:none;border-bottom:1px dotted var(--terracotta);">← Voltar para a Roda de Leitoras</a>
+  </footer>
+
+</div>
+</body>
+</html>
